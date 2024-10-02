@@ -2,10 +2,17 @@ package main
 
 import (
   "github.com/inferablehq/inferable-go"
+  "github.com/joho/godotenv"
   "os"
 )
 
 func main() {
+  // Load vars from .env file
+  err := godotenv.Load()
+  if err != nil {
+    panic(err)
+  }
+
   // Instantiate the Inferable client.
   client, err := inferable.New(inferable.InferableOptions{
     // To get a new key, run:

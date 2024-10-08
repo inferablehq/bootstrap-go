@@ -15,7 +15,7 @@ func main() {
   }
 
   // Instantiate the Inferable client.
-  client, err := inferable.New(inferable.InferableOptions{
+  i, err := inferable.New(inferable.InferableOptions{
     // To get a new key, run:
     // npx @inferable/cli auth keys create 'My New Machine Key' --type='cluster_machine'
     APISecret:   os.Getenv("INFERABLE_API_SECRET"),
@@ -26,13 +26,8 @@ func main() {
     panic(err)
   }
 
-  service, err := client.RegisterService("MyService")
-  if err != nil {
-    // Handle error
-  }
-
   // Register demo functions (Defined in ./src/demo.go)
-  err = service.RegisterFunc(inferable.Function{
+  err = i.Default.RegisterFunc(inferable.Function{
     Func:        SearchInventory,
     Name:        "searchInventory",
     Description: "Searches the inventory",
@@ -41,7 +36,7 @@ func main() {
     panic(err)
   }
 
-  err = service.RegisterFunc(inferable.Function{
+  err = i.Default.RegisterFunc(inferable.Function{
     Func:        GetInventoryItem,
     Name:        "getInventoryItem",
     Description: "Gets an inventory item",
@@ -50,7 +45,7 @@ func main() {
     panic(err)
   }
 
-  err = service.RegisterFunc(inferable.Function{
+  err = i.Default.RegisterFunc(inferable.Function{
     Func:        ListOrders,
     Name:        "listOrders",
     Description: "Lists all orders",
@@ -59,7 +54,7 @@ func main() {
     panic(err)
   }
 
-  err = service.RegisterFunc(inferable.Function{
+  err = i.Default.RegisterFunc(inferable.Function{
     Func:        TotalOrderValue,
     Name:        "totalOrderValue",
     Description: "Calculates the total value of all orders",
@@ -72,7 +67,7 @@ func main() {
     RequiresApproval bool
   }
 
-  err = service.RegisterFunc(inferable.Function{
+  err = i.Default.RegisterFunc(inferable.Function{
     Func:        MakeOrder,
     Name:        "makeOrder",
     Description: "Makes an order",
@@ -82,12 +77,12 @@ func main() {
     panic(err)
   }
 
-  err = service.Start()
+  err = i.Default.Start()
   if err != nil {
     panic(err)
   }
 
-  defer service.Stop()
+  defer i.Default.Stop()
 
   // Wait for CTRL+C
   <-make(chan struct{})

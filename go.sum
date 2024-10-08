@@ -9,6 +9,10 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/inferablehq/inferable-go v0.1.3 h1:Dsp+GIUANZyZiKA7wk5FbruWxEJ1UcntZ/cxm8pRQZE=
 github.com/inferablehq/inferable-go v0.1.3/go.mod h1:e+/0/e5m3eSALKeJNnrGVz+Se0qAq+y7E+MB+OyNY5Q=
+github.com/inferablehq/inferable-go v0.1.5 h1:NAgjr1/yrDFwJo1KLNOsdu60pGj4RnIotAw8EB0FnmU=
+github.com/inferablehq/inferable-go v0.1.5/go.mod h1:e+/0/e5m3eSALKeJNnrGVz+Se0qAq+y7E+MB+OyNY5Q=
+github.com/inferablehq/inferable-go v0.1.6 h1:AoEHta/pUwGdw3f+7PdacejPXp2VXr6wuoBAKLK0U4Y=
+github.com/inferablehq/inferable-go v0.1.6/go.mod h1:e+/0/e5m3eSALKeJNnrGVz+Se0qAq+y7E+MB+OyNY5Q=
 github.com/invopop/jsonschema v0.12.0 h1:6ovsNSuvn9wEQVOyc72aycBMVQFKz7cPdMJn10CvzRI=
 github.com/invopop/jsonschema v0.12.0/go.mod h1:ffZ5Km5SWWRAIN6wbDXItl95euhFz2uON45H2qjYt+0=
 github.com/jmespath/go-jmespath v0.4.0 h1:BEgLn5cpjn8UN1mAw4NjwDrS35OdebyEtFe+9YPoQUg=

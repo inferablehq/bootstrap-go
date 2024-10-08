@@ -3,7 +3,7 @@ module github.com/inferablehq/bootstrap-go
 go 1.23.2
 
 require (
-	github.com/inferablehq/inferable-go v0.1.3
+	github.com/inferablehq/inferable-go v0.1.6
 	github.com/joho/godotenv v1.5.1
 )
 
